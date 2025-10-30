@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Rock Paper Scissors — Simple Web App</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Rock • Paper • Scissors</h1>
+    <section class="scoreboard">
+      <div class="score">
+        <div class="label">Player</div>
+        <div id="player-score" class="value">0</div>
+      </div>
+      <div class="score">
+        <div class="label">Computer</div>
+        <div id="computer-score" class="value">0</div>
+      </div>
+      <div class="settings">
+        <label for="best-of">Best of</label>
+        <select id="best-of">
+          <option value="1">1</option>
+          <option value="3" selected>3</option>
+          <option value="5">5</option>
+          <option value="7">7</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="choices">
+      <button class="choice" data-move="rock" aria-label="Rock">✊<span>Rock</span></button>
+      <button class="choice" data-move="paper" aria-label="Paper">✋<span>Paper</span></button>
+      <button class="choice" data-move="scissors" aria-label="Scissors">✌️<span>Scissors</span></button>
+    </section>
+
+    <section class="results" aria-live="polite">
+      <p id="round-result">Make your choice to start the game.</p>
+      <p id="last-play"></p>
+    </section>
+
+    <section class="controls">
+      <button id="reset">Reset</button>
+      <button id="auto-play">Auto Play ⏯️</button>
+    </section>
+
+    <footer class="footer">
+      <small>Keyboard shortcuts: R = Rock, P = Paper, S = Scissors</small>
+    </footer>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
